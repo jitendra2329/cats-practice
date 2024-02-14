@@ -21,14 +21,12 @@ object TypeClasses extends App {
 
   object DoTheMath {
 
-    private def addition[B](first: B, second: B)(implicit m: Math[B]): B = {
+     def addition[B](first: B, second: B)(implicit m: Math[B]): B = {
       m.add(first, second)
     }
 
-    println("Addition: "+ DoTheMath.addition(23,23))
   }
 
-
-
+  println("Addition: "+ DoTheMath.addition(23,23))
 
 }
